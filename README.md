@@ -1,2 +1,2 @@
 # basic-IT
-BASH scripts, python programs, SQL table creation
+creating BASH scripts, simple python programs, SQL table creation and manipulation
