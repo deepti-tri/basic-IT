@@ -1,0 +1,59 @@
+#creating the first table
+create table restart (
+	studentID int primary key NOT NULL,
+	studentName char(255),
+	restartCity char(255),
+	gradDate date
+);
+
+#creating records for first table
+insert into restart
+values (1, 'John', 'NY', '2022-04-15'); 
+insert into restart
+values (2, 'Mary', 'Denver', '2022-04-15'); 
+insert into restart
+values (3, 'Deeps', 'Seattle', '2022-04-15'); 
+insert into restart
+values (4, 'Liz', 'Las Vegas', '2022-04-15'); 
+insert into restart
+values (5, 'Charlie', 'London', '2022-04-15'); 
+insert into restart
+values (6, 'Neha', 'Mumbai', '2022-04-15'); 
+insert into restart
+values (7, 'Sally', 'SF', '2022-04-15'); 
+insert into restart
+values (8, 'Mowgli', 'NJ', '2022-04-15'); 
+insert into restart
+values (9, 'Elsa', 'Nuuk', '2022-04-15'); 
+insert into restart
+values (10, 'Emma', 'Paris', '2022-04-15'); 
+
+#display the table
+select * from restart;
+	
+#creating the second table
+create table cloud_practitioner (
+	studentID int,
+	certDate date
+);
+
+#creating records for the second table
+insert into cloud_practitioner
+values (1, '2022-05-15');
+insert into cloud_practitioner
+values (3, '2022-05-15');
+insert into cloud_practitioner
+values (6, '2022-05-15');
+insert into cloud_practitioner
+values (8, '2022-05-15');
+insert into cloud_practitioner
+values (10, '2022-05-15');
+
+#display the second table
+select * from cloud_practitioner;
+
+#joining the two tables	
+select r.studentID, r.studentName, c.certDate
+from restart as r
+inner join cloud_practitioner as c
+on r.studentID = c.studentID;
